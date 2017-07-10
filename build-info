@@ -1,0 +1,14 @@
+In project root:
+---
+find -name generated | xargs rm -rf ;
+find -name generated-sources | xargs rm -rf ;
+find -name src-gen | xargs rm -rf ;
+find -name xtend-gen | xargs rm -rf ;
+find -name target | xargs rm -rf ;
+cd com.typesafe.hocon.releng/ ;
+mvn -e install ;
+cd ..
+
+From within
+~/.m2/repository/com/typesafe/hocon/com.typesafe.hocon.updatesite/${VERSION_FOLDER}
+extract the .zip file and upload to OUR repo ;)
